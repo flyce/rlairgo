@@ -20,7 +20,9 @@ const TypeSchema = new Schema({
         type: String,
         required: [true, 'timeStamp field is required'],
         default: Date.now
-    }
+    },
+    // title: [{type: Schema.Types.String, ref: 'Video'}],
+    // imageUrl: [{type: Schema.Types.String, ref: 'Video'}]
 });
 
 const Type = mongoose.model('types', TypeSchema);

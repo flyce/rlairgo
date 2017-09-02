@@ -6,7 +6,7 @@ const Schema = mongoose.Schema;
 // create Video Schema & model
 const VideoSchema = new Schema({
     title: {
-        type: String,
+        type:String,
         required: [true, 'title field is required']
     },
     imageUrl: {

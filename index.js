@@ -8,7 +8,7 @@ const verifyToken = require('./middleware/verifyToken');
 const app = express();
 
 // print log
-app.use(logger('dev'));
+app.use(logger(':remote-addr :method :url :status :response-time ms - :res[content-length]'));
 
 //设置跨域访问
 app.all('*', function(req, res, next) {

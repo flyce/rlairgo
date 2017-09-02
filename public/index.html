@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>rlairgo API - 每天分享一条短视频</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="index.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="/favicon.ico">
+</head>
+<body>
+<h1 class="title">rlairgo - powered by <a href="http://www.flyce.cn" target="_blank">Echo</a></h1>
+<div id="homepage">
+    <h1>使用说明</h1>
+    <div id="niji-container">
+        <h2>GET</h2>
+        <strong>video</strong> 获取视频列表<br />
+        <strong>video/:id</strong> 获取视频详细信息<br />
+        <strong>comment/:id</strong> 获取视频评论<br />
+        <h2>POST</h2>
+        <strong>video</strong> 新增一条视频<br />
+        数据格式:<br />
+        <code>
+            {<br />
+            "title": "坚果Pro",<br />
+            "imageUrl": "http://rlair.live/image.jpg",<br />
+            "src": "http://rlair.live/demo.mp4",<br />
+            "videoId": "10001",<br />
+            "introduction": "坚果 Pro，是锤子科技在2017年5月9日晚在深圳正式发布的旗下的第五款新机。",<br />
+            "source": "smartisan",<br />
+            "timeStamp": "1501150459"<br />
+            }<br />
+        </code><br />
+        <strong>comment</strong> 新增一条评论<br />
+        数据格式:<br />
+        <code>
+            {<br />
+                "videoId": "10001",<br />
+                "username": "Echo",<br />
+                "headImageUrl": "http://rlair.live/headImage.jpg",<br />
+                "context": "真棒",<br />
+                "timeStamp": "1501150459"<br />
+            }<br />
+        </code><br />
+        <h2>PUT</h2>
+        <strong>video/:id</strong> 更新视频信息<br />
+        数据格式:<br />
+        <code>
+            {<br />
+            "title": "修改标题"<br />
+            }<br />
+        </code>
+        <br />
+        <h2>DELETE</h2>
+        <strong>video/:id</strong> 删除视频<br />
+        <h2>备注</h2>
+        PUT、POST 需要在 headers 里加入 <code>Content-Type: application/json</code>
+    </div>
+</div>
+</body>
+</html>
